@@ -1,0 +1,8 @@
+path: /content/drive/MyDrive/NumberPlate_Datset_updated/NumberPlate Datset with annotation/dataset
+
+train: images/train
+val: images/train   # Using training set as validation (OK for small datasets)
+test: images/test
+
+names:
+  0: plate
