@@ -58,6 +58,34 @@ Detected plate regions enhanced before OCR:
 - Real-time annotated detection display
 - OCR text output
 - Downloadable results (CSV + annotated images)
+## REST API (FastAPI)
+
+The model is also served as a REST API using FastAPI.
+
+Start the API:
+```bash
+uvicorn api:app --reload
+```
+Interactive docs at `http://localhost:8000/docs`
+
+### Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | Health check |
+| GET | `/health` | Model load status |
+| POST | `/detect` | Detect plates in uploaded image |
+
+### Screenshots
+![API Overview](docs/screenshots/swagger_overview.png)
+<img width="1186" height="627" alt="image" src="https://github.com/user-attachments/assets/52e8a4a5-a950-4e39-a504-62cff58d4d0a" />
+
+
+![Health Check](docs/screenshots/health_check.png)
+<img width="1055" height="612" alt="image" src="https://github.com/user-attachments/assets/284bdbad-dcdd-4cd8-a177-a2948da58430" />
+
+![Detection Response](docs/screenshots/detect_response.png)
+
+<img width="987" height="602" alt="image" src="https://github.com/user-attachments/assets/26f0e6b7-c689-4b50-ae13-8aff83093291" />
 
 ## ✅ Results
 
